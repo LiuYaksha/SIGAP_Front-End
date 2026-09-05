@@ -1,0 +1,21 @@
+{
+  "name": "sigap-frontend-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test tests/store.test.js",
+    "test:e2e": "playwright test",
+    "screenshots": "node scripts/screenshots.mjs && node scripts/mobile-screenshots.mjs",
+    "format": "prettier --write src tests scripts/*.mjs index.html package.json playwright.config.js PANDUAN-DEMO.md",
+    "format:check": "prettier --check src tests scripts/*.mjs index.html package.json playwright.config.js PANDUAN-DEMO.md"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "prettier": "^3.9.6",
+    "vite": "^6.1.0"
+  }
+}
